@@ -19,23 +19,38 @@ $(document).ready(function() {
             success : function(user) {
 
                 if (user.valid == true) {
-                    $("errormsg").addClass("hideMessage");
-                    $("#loginForm").removeClass("fail");
-                    $("#loginForm").addClass("success");
+                    $("#successmsg").removeClass("fail");
+                    $("#successmsg").addClass("success");
 
-                    console.log('User Details Match Found');
+                    // show the success message
+                    $("#successmsg").removeClass("hideMessage");
+                    $("#successmsg").addClass("showMessage");
+                    // hide the error message
+                    $("#errormsg").removeClass("showMessage");
+                    $("#errormsg").addClass("hideMessage");
                 }
                 
                 else {
-                    $("#loginForm").addClass("fail");
-                    $("#loginForm").removeClass("success");
+                    $("#errormsg").addClass("fail");
+                    $("#errormsg").removeClass("success");
 
+                    // show the error message
                     $("#errormsg").removeClass("hideMessage");
                     $("#errormsg").addClass("showMessage");
-                    console.log('User Details Match NOT Found');
+                    // hide the success message
+                    $("#successmsg").removeClass("showMessage");
+                    $("#successmsg").addClass("hideMessage");
                 }
 
-            $("#postResultDiv").html("<p>" + "Post success! <br>" + "Email address: " + user.userEmail + "</br>" + "Password: " + user.userPass + "</br>" + "Valid user: " + user.valid + "</p>");
+            $("#postResultDiv").html(
+                "<p>" + 
+                    "Post success! <br>" + "Email address: " + user.userEmail + 
+                    "</br>" + 
+                    "Password: " + user.userPass + 
+                    "</br>" + 
+                    "Valid user: " + user.valid + 
+                "</p>"
+            );
 
             },  
             error: function(e){

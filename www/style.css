@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
 
 *{
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: rgb(240,240,240);
 }
 
 .wrapper{
@@ -12,39 +16,61 @@
 }
 
 header{
-    height: 60px;
+    padding: 10px 20px;
+    height: 100%;
     background: #333;
 }
 
 header h1{
-    color: #fff;    
+    color: rgb(255, 60, 138);    
 }
 
-.content{
-    margin: 0 auto;
-    width: 300px;
+.tile{
+    width: 240px;
+    margin: 20px auto;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgb(200,200,200);
 }
 
-.content h1{
-    text-align: center;
-    margin: 20px 0;
+.tile h2{
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
+
 
 #loginForm{
     margin: 0 auto;
-    width: fit-content;
-    padding: 20px;
-    background: rgb(240,240,240);
+    padding: 20px 0;
     border-radius: 10px;
-    text-align: center;
 }
 
-#loginForm form {
-    margin: 10px 0;
+#loginForm h2{
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#userSubmit, #userEmail, #userPass{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px 0;
+    border-radius: 8px;
+    border-color: #aaa;
+    border-width: 1px;
+}
+
+#userSubmit{
+    background-color: rgb(255, 60, 138);
+    color: #fff;
+}
+
+.statusMessage{
+    padding: 10px;
 }
 
 .success{
-    background-color: rgb(50,240,50) !important;
+    background-color: rgb(91, 193, 91) !important;
 }
 
 .fail{
@@ -57,4 +83,18 @@ header h1{
 
 .showMessage{
     display: block;
+}
+
+.image img{
+    width: 150px !important;
+    height: 100% !important;
+    border-radius: 100%;
+    box-shadow: 0 0 10px #333
+
+}
+
+.image{
+    margin: 20px auto 30px;
+    width: 150px;
+    
 }
