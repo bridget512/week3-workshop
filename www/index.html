@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Week 3 Workshop </title>
+        <title> Homepage (index.html) </title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </head>
     
 <body>
-    <h1>Howdy World!</h1>
-    <a href="test.html">Link to test page</a>
+    <header>
+        <div class="wrapper">
+            <h1>Bridget's Workshop Tasks</h1>
+        </div>
+    </header>
+
+    <div class="wrapper">
+           
+        
+            
+        <div class="content"> 
+            <h1> Welcome! </h1>
+            <div id="loginForm">
+                <h2>Enter Credentials</h2>
+                <form>
+                    <label for="userEmail">Email</label><br>
+                    <input placeholder="b" type="text" id="userEmail" name="userEmail"><br>
+                    <label for="userPass">Password</label><br>
+                    <input placeholder="1" type="password" id="userPass" name="userPass"><br>
+                    <button type="submit">Login</button>
+                </form>
+                <div id="errormsg" class="hideMessage"><strong>User not found, please try again</strong></div>
+                <div id="postResultDiv"></div>
+            </div>
+
+            
+
+        </div> <!--content-->
+    </div> <!--wrapper-->
+    
 </body>
 
 </html>
