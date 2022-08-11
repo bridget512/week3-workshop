@@ -23,9 +23,6 @@ $(document).ready(function() {
                     $("#loginForm").removeClass("fail");
                     $("#loginForm").addClass("success");
 
-                    
-                    
-
                     console.log('User Details Match Found');
                 }
                 
